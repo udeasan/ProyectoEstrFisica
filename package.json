@@ -1,0 +1,19 @@
+{
+  "name": "backendcitas",
+  "version": "1.0.0",
+  "description": "Backend del proyecto aplicación de citas",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "udea",
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.0.1",
+    "express": "^4.18.1",
+    "express-async-handler": "^1.2.0",
+    "mongoose": "^6.4.6",
+    "nodemon": "^2.0.19"
+  }
+}
