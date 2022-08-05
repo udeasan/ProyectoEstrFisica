@@ -10,7 +10,8 @@ const app = express();
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 
-app.use("/api", require("./routes/dateRouter.js"))
+app.use("/api", require("./routes/dateRoutes.js"))
 app.use("/api", require("./routes/userRoutes.js"))
+app.use("/api", require("./routes/utilRoutes.js"))
 
 app.listen(port, () => console.log(`Servidor iniciado en el puerto ${process.env.PORT}`))

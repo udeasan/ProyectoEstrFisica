@@ -8,7 +8,11 @@ const userSchema = mongoose.Schema({
     },
     name: String,
     password: String,
-    telephone: String
+    telephone: String,
+    address: String,
+    isAdmin: Boolean,
+    profilePicture: String,
+    businessName: String
 }, {
     timestamps: true,
 });
