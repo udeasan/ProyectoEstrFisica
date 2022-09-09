@@ -9,7 +9,8 @@ connectDB();
 
 const app = express();
 
-app.use(cors());
+app.use(cors({origin: '*'}));
+
 app.use(express.json());
 app.use(express.urlencoded({extended: false}))
 app.use('/doc', swaggerUi.serve, swaggerUi.setup(swaggerFile))
