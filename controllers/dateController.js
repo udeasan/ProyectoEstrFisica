@@ -60,11 +60,11 @@ const putDate = asyncHandler(async (req, res) => {
 const deleteDate = asyncHandler(async (req, res) => {
     const dateToDelete = await Date.findOne({id: req.params.id});
     
-    if(dateToDelete.user === req.user) {
+    if(dateToDelete) {
         await Date.findByIdAndDelete(req.params.id);
     } else {
         res.status(401);
-        throw new Error('No puede eliminar citas de otros clientes');
+        throw new Error('No puede eliminar citas');
     }
 
     res.status(200).json({"message" : "Se ha eliminado la cita"});
